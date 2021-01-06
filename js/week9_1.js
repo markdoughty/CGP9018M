@@ -15,7 +15,6 @@
         renderer.setClearColor(0x999999, 1.0);
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.shadowMapEnabled = true;
-       // renderer.shadowMapSoft = true;
 
         //create geometry
         var sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
@@ -32,8 +31,6 @@
             bump.repeat.set(4,4);
         });
                
-
-        //var material = new THREE.MeshPhongMaterial({map: texture, bumpMap: bump});
         var material = new THREE.MeshPhongMaterial({map: texture});
         var planeMaterial = new THREE.MeshPhongMaterial({side: THREE.DoubleSide})
      

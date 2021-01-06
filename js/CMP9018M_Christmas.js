@@ -4,7 +4,6 @@ var scene, camera, renderer;
 var points, material, geometry, planeGeometry, planeMaterial, plane;
 var message, messageGeometry, messageMaterial;
 var vector, positions, texture, controls, sz;
-var raycaster;
 var count = 0;
 
 function init()
@@ -33,7 +32,7 @@ function init()
 
     var planeTexture = new THREE.TextureLoader().load('textures/christmasScene.jpg', function(){
     });
-    //plane
+    //background plane
     planeGeometry = new THREE.PlaneGeometry(6, 3.5, 32, 32);
     planeMaterial = new THREE.MeshBasicMaterial({map:planeTexture});
     plane = new THREE.Mesh(planeGeometry, planeMaterial);
@@ -107,7 +106,7 @@ function updateSnowflakePosition()
     {
         if(positions[x] <= -1.2)
         {
-
+            //stop at the bottom
         }else{
         positions[x] -=0.005;
         }
